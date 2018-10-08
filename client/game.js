@@ -18,7 +18,6 @@ const board = (rows,columns) => {
 
 //Sets the value a position inside the array
 let setValues = (arr,row,col) =>{
-
     arr[row][col] = !arr[row][col]
 };
 
@@ -94,17 +93,6 @@ const runChange = (arr) => {
 };
 
 
-
-let arr = board(5,5);
-
-setValues(arr,2,1);
-setValues(arr,1,1);
-setValues(arr,1,2);
-setValues(arr,2,2);
-
-
-console.log(arr);
-let mutation = runChange(arr);
-console.log(mutation);
-console.log(runChange(mutation));
-
+module.exports = {
+    runChange,
+};
