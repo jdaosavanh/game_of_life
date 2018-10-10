@@ -31,6 +31,9 @@ sure it pass all the test.
 
 It can be ran be cd into the client directory and run "npm run test"
 
+#Built on github pages
+
+You can find static built app by going to https://jdaosavanh.github.io/game_of_life/
 
 
 
