@@ -25,6 +25,7 @@ there are not that manying moving parts that need to talk to each other. The cor
 in from the main component.
 
 #Testing
+
 The main is done on the core logic of the program in game. Using mocha and chai to create a test script and making
 sure it pass all the test.
 
