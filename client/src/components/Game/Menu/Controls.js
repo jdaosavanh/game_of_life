@@ -37,12 +37,12 @@ class Controls extends Component{
                 <Button
                     color={"dark"}
                     style={buttonStyles}
-                    onClick={this.toggle}
+                    onClick={this.props.runChange}
                 >Next</Button>
                 <Button
                     color={"dark"}
                     style={buttonStyles}
-                    onClick={this.toggle}
+
                 >Continuous</Button>
             </div>
         );
