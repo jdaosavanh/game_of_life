@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
 import Board from './Board/Board';
 import Controls from './Menu/Controls'
 import './Game.css'
