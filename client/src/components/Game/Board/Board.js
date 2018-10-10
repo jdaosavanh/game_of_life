@@ -32,7 +32,7 @@ class Board extends Component {
                                {
                                    row.map((col,col_index) =>{
                                        return(
-                                           <Cell cellClass={this.cellClass(col)} key={row_index+col_index} cellToggle={this.props.onCellToggled.bind(this,row_index,col_index)}/>
+                                           <Cell cellClass={this.cellClass(col)} key={row_index+col_index} cellToggle={this.props.onCellToggle.bind(this,row_index,col_index)}/>
                                        )
                                    })
                                }

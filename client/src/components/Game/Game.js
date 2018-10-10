@@ -10,25 +10,24 @@ class Game extends Component {
     state = {
         rows:8,
         columns:6,
-        board: Array(8).fill().map(x => Array(6).fill(false))
+        board: Array(8).fill().map(x => Array(6).fill(false)),
+        continuous: true
     };
 
 
     setRow = (event) => {
-
+        //Updates the value of row and board to use input amount of rows
         if(parseInt(event.target.value)) {
-
             let value = parseInt(event.target.value);
             this.setState({
                 rows: value,
                 board: Array(value).fill().map(x => Array(this.state.columns).fill(false))
             })
         }
-
     };
 
     setCol = (event) => {
-
+        //Updates the value of column and board to use input amount of columns
         if(parseInt(event.target.value)) {
             let value = parseInt(event.target.value);
             this.setState({
@@ -36,7 +35,6 @@ class Game extends Component {
                 board: Array(this.state.rows).fill().map(x => Array(value).fill(false))
             })
         }
-
     };
 
     resetBoard = () => {
@@ -46,11 +44,10 @@ class Game extends Component {
     };
 
 
-    onCellToggled = (row_index,column_index) => {
+    onCellToggle = (row_index,column_index) => {
         let board = JSON.parse(JSON.stringify(this.state.board));
-
+        //Set cell clicked to the opposite of what it was.
         board[row_index][column_index] = !board[row_index][column_index];
-
         this.setState({
             board: board
         })
@@ -65,6 +62,22 @@ class Game extends Component {
 
     };
 
+    runContinuous = () => {
+
+
+        clearInterval(this.intervalId);
+
+        //Continuous state is set to true and will flip once clicked
+        if(this.state.continuous) {
+            this.intervalId = setInterval(this.runChange, 350)
+        }
+
+        this.setState({
+            continuous: !this.state.continuous
+        });
+    };
+
+
     render() {
         return (
             <div className={"game"}>
@@ -73,9 +86,11 @@ class Game extends Component {
                     setCol={this.setCol.bind(this)}
                     resetBoard={this.resetBoard.bind(this)}
                     runChange={this.runChange.bind(this)}
+                    runContinuous={this.runContinuous.bind(this)}
+                    continuous={this.state.continuous}
 
                 />
-                <Board onCellToggled={this.onCellToggled}
+                <Board onCellToggle={this.onCellToggle}
                        board={this.state.board}
                 />
 

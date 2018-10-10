@@ -8,12 +8,14 @@ class Controls extends Component{
 
         const inputStyles = {
             width: '10rem',
-            margin: 'auto'
+            margin: '.25rem auto'
         };
 
         const buttonStyles = {
             margin: ".5rem .2rem"
         };
+
+        const continuousText = this.props.continuous ? 'Continuous':'Stop';
 
         return(
             <div>
@@ -42,8 +44,8 @@ class Controls extends Component{
                 <Button
                     color={"dark"}
                     style={buttonStyles}
-
-                >Continuous</Button>
+                    onClick={this.props.runContinuous}
+                >{continuousText}</Button>
             </div>
         );
     };
