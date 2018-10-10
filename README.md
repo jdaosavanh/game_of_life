@@ -3,7 +3,7 @@ A Game of Life implementation using react
 
 Node version 10 should be installed and NPM version 6
 
-To install all packages run "npm install" and "npm run client-install"
+To install all packages go to into game_of_life directory and run "npm run client-install"
 To run node server run "npm run client"
 It will run on localhost port 3000 by default
 Go to localhost:3000 to see UI

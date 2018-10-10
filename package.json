@@ -1,20 +1,12 @@
 {
   "name": "reactexpress",
   "version": "1.0.0",
-  "description": "Starter kit for creating React/Redux and Express apps",
-  "main": "server.js",
+  "description": "",
   "scripts": {
     "client-install": "cd client && npm install",
-    "start": "node run client",
-    "client": "npm start --prefix client",
-    "dev": "concurrently  \"npm run client\""
+    "client": "npm start --prefix client"
   },
   "author": "Jameson Daosavanh",
   "license": "MIT",
-  "devDependencies": {},
-  "dependencies": {
-    "concurrently": "^3.5.1",
-    "express": "^4.16.2",
-    "nodemon": "^1.14.7"
-  }
+  "devDependencies": {}
 }
