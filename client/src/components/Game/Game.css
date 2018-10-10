@@ -1,0 +1,25 @@
+.board {
+    margin: 0 25%;
+}
+
+.board-row{
+    display: inline-block;
+}
+
+.cell {
+    border: 1px #222 solid;
+    border-radius: 15%;
+    margin: 1px;
+    width: 2rem;
+    height: 2rem;
+
+}
+.cell:hover{
+    background-color: #1b858b;
+
+}
+
+.cell.on{
+    background-color: #15588b;
+}
+
