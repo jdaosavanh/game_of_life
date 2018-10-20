@@ -1,4 +1,4 @@
-# game_of_life
+# Game of life kata
 A Game of Life implementation using react
 
 Node version 10 should be installed and NPM version 6
